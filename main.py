@@ -1,7 +1,9 @@
 import pygame
 import sys
-
+file=r'C:\Users\LEGION\Music\秦岚 _ 江疏影 _ 景甜 _ 王俊凯 _ 王源 _ 易烊千玺 _ 吴磊 - 我们都是追梦人.mp3'
 pygame.init()  # 初始化pygame
+track = pygame.mixer.music.load(file)	# 加载音乐文件
+pygame.mixer.music.play()				# 开始播放音乐流
 size = width, height = 640, 480  # 设置窗口大小
 screen = pygame.display.set_mode(size)  # 显示窗口
 color = (0, 0, 0)  # 设置颜色
