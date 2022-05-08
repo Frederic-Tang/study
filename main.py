@@ -8,6 +8,7 @@ size = width, height = 640, 480  # 设置窗口大小
 screen = pygame.display.set_mode(size)  # 显示窗口
 color = (0, 0, 0)  # 设置颜色
 ball = pygame.image.load('ball.png')  # 加载图片
+stop= pygame.image.load('暂停.png')
 ballrect = ball.get_rect()  # 获取矩形区域
 speed = [5, 5]  # 设置移动的X轴、Y轴
 clock = pygame.time.Clock()  # 设置时钟
@@ -25,6 +26,10 @@ while True:  # 死循环确保窗口一直显示
     # 碰到上下边缘
     if ballrect.top < 0 or ballrect.bottom > height:
         speed[1] = -speed[1]
+
+        for event in pygame.event.get():
+                if event.type == pygame.K_SPACE:
+                  print(stop)
 
     screen.fill(color)
     screen.blit(ball, ballrect)
