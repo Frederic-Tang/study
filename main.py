@@ -37,7 +37,6 @@ def game_clock():
             pygame.display.update()
             clock.tick(15)
             print(clock_)
-game_clock()
 
 while True:  # 死循环确保窗口一直显示
     clock.tick(60)  # 每秒执行60次
